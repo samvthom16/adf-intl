@@ -1,0 +1,113 @@
+.involved {
+    background: #fff;
+    padding: 3em 0;
+    .wrap {
+        position: relative;
+    }
+}
+.vertical-center {
+    margin: 0 0 1em;
+    h2 {
+        margin-top: 0;
+    }
+    @include bp(62.5) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        padding-right: 3em;
+        margin: 0;
+    }
+}
+.involved-options {
+    @include bp(62.5) {
+        padding-left: 60%;
+    }
+}
+.involved-link {
+    display: block;
+    //background: linear-gradient(to right, $red, $red 26%, #fff 26%, #fff);
+    padding: 1em 1.5em 1em 30%;
+    position: relative;
+    border: 0;
+    margin-bottom: 1em;
+    box-shadow:	2px 2px 4px rgba(0,0,0,0.3);
+    color: $text;
+    p {
+        font-size: 0.8125em;
+        margin: 0;
+        line-height: 1.4;
+        position: relative;
+        z-index: 2;
+        @include bp(44) {
+            font-size: 1em;
+        }
+        @include bp(62.5em) {
+            font-size: 0.8125em;
+        }
+    }
+    h4 {
+        margin: 0 0 0.5em;
+        position: relative;
+        z-index: 2;
+    }
+    svg,
+    img {
+        position: absolute;
+        left: calc(15% - 0.75em);
+        top: 50%;
+        margin-top: -0.5em;
+        font-size: 2.25em;
+        fill: #fff;
+        z-index: 10;
+        max-width: 38px;
+    }
+    &:after {
+        content: '';
+        display: block;
+        width: 26%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        transition: width 300ms linear;
+    }
+    &:hover {
+        color: #fff;
+        &:after {
+            width: 100%;
+        }
+    }
+}
+.red {
+    &:after {
+        background: $red;
+    }
+    //background: linear-gradient(to right, $red, $red 26%, #fff 26%, #fff);
+}
+.blue {
+    &:after {
+        background: $blue;
+    }
+    //background: linear-gradient(to right, $blue, $blue 26%, #fff 26%, #fff);
+}
+.yellow {
+    &:after {
+        background: $yellow;
+    }
+    //background: linear-gradient(to right, $teal, $teal 26%, #fff 26%, #fff);
+}
+.black {
+    &:after {
+        background: $black;
+    }
+    //background: linear-gradient(to right, $teal, $teal 26%, #fff 26%, #fff);
+}
+.grey {
+    &:after {
+        background: $dark-gray;
+    }
+    //background: linear-gradient(to right, $teal, $teal 26%, #fff 26%, #fff);
+}

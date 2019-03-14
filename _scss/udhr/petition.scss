@@ -1,0 +1,220 @@
+#petition-trigger {
+    display: block;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: #4b6cb7;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto 1em;
+    max-width: 80%;
+    font-size: 1.5em;
+    border-color: darken(#4b6cb7, 10%);
+    @include bp(44) {
+    }
+    @include bp(50) {
+    }
+    span {
+        font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+        display: none;
+        font-size: 0.5em;
+        margin: 0.75em 0 0;
+        color: rgba(255,255,255,0.5);
+    }
+    /*&.sticky {
+        font-size: 6vw;
+        padding: 0.75em 1.25em 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        text-decoration: none;
+        line-height: 1;
+        opacity: 1;
+        transition: all 0.5s ease-in-out 0.1s, padding 0.2s ease-in-out;
+        position: fixed;
+        left: 10%;
+        right: 10%;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0.25em 0.1em 0.1em rgba(0,0,0,0.2);
+        //display: block;
+        //width: 80%;
+        @include bp(44) {
+            left: 20%;
+            right: 20%;
+            //font-size: 2.75vw;
+            //width: 60%;
+            font-size: 5vw;
+        }
+        @include bp(50) {
+            left: 27.5%;
+            right: 27.5%;
+            //width: 45%;
+            font-size: 4vw;
+        }
+        &:hover {
+            padding-top: 1.25em;
+        }
+    }*/
+    svg {
+        position: absolute;
+        right: 0.5em;
+    }
+    &:hover {
+        background: lighten(#4b6cb7, 10%);
+    }
+
+}
+#sticky-petition {
+    @include button(#4b6cb7, #4b6cb7, #fff);
+    font-size: 4.5vw;
+    padding: 0.75em 1.25em 0.5em;
+    border-radius: 0;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    text-decoration: none;
+    line-height: 1;
+    opacity: 1;
+    transition: all 0.5s ease-in-out, padding 0.2s ease-in-out;
+    position: fixed;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    &.sticky {
+        display: block;
+    }
+    &.overlay-showing {
+        bottom: 50%;
+        opacity: 0;
+    }
+    svg {
+        position: relative;
+        top: 2px;
+        margin-right: 0.5em;
+    }
+    @include bp(50) {
+        font-size: 2.5vw;
+        left: 27.5%;
+        right: 27.5%;
+    }
+}
+.overlay-close {
+    color: #fff;
+    position: absolute;
+    right: 0.5em;
+    top: 0.25em;
+    font-size: 2.25em;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 1;
+    &:hover {
+        text-decoration: none;
+    }
+}
+.petition {
+    top: 125%;
+    transition: all 0.5s ease-in-out;
+}
+.overlay-show {
+    .petition {
+        top: 10%;
+        transform: translateX(-50%);
+        max-height: 85%;
+        overflow: auto;
+    }
+}
+#petition {
+    .gform_wrapper {
+        margin: 0;
+    }
+    .gform_heading,
+    .gform_body,
+    .gform_footer {
+        padding: 1em 1.5em;
+        background: #fff;
+        margin: 0;
+    }
+    .gform_footer {
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        input[type=submit] {
+            @include button(#F69000, #F69000, #fff);
+        }
+    }
+    .gform_heading {
+        background: #4b6cb7;
+        color: #fff;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+    }
+    .gform_title {
+        letter-spacing: 2px;
+        font-size: 1.75em;
+    }
+    .gfield_html {
+        border-top: 1px solid $back;
+        padding: 1em 0 0;
+        font-size: 0.75em;
+    }
+    .ginput_container_email {
+        input {
+            width: 100%;
+        }
+    }
+    .gfield_checkbox {
+        input {
+            margin-right: 0.5em;
+        }
+    }
+    .validation_error {
+        background: #fff;
+        padding: 1em 0;
+        margin: 0;
+    }
+}
+.overlay-show {
+	visibility: visible;
+    opacity: 1;
+    .overlay-content {
+        visibility: visible;
+    }
+}
+.video-show {
+	visibility: visible;
+    opacity: 1;
+    .overlay-video {
+        visibility: visible;
+    }
+    .overlay-hide {
+        display: block;
+    }
+}
+.overlay-video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translate(-50%, -50%);
+}
+.overlay-hide {
+    display: none;
+    position: absolute;
+    top: 0.1em;
+    right: 0.5em;
+    color: rgba(255,255,255,0.8);
+    font-size: 4em;
+    line-height: 1;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}

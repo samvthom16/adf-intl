@@ -1,0 +1,32 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-book {
+  width: 0.9302142857142857em;
+}
+
+.icon-money {
+  width: 1.0714285714285714em;
+}
+
+.icon-gavel {
+  width: 1.0105714285714285em;
+}
+
+.icon-balance-scale {
+  width: 1.2142857142857142em;
+}

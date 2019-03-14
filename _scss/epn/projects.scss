@@ -1,0 +1,116 @@
+.projects-intro {
+    background: #ffc300;
+    text-align: center;
+    padding: 3em 0;
+    h2 {
+        color: #fff;
+    }
+    p {
+        font-size: 1.5em;
+        max-width: 40em;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+}
+.grid {
+    &.three {
+        @include bp(44) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+.story-trigger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        transition: all .3s ease-in-out;
+    }
+    &:after {
+        content: '';
+        display: block;
+        background: rgba(0, 255, 255, 0.21);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+    &:hover {
+        &:after {
+            display: block;
+        }
+        img {
+            transform: scale(1.1);
+        }
+        .story-title {
+            display: block;
+        }
+    }
+    @include bp(50) {
+        &:after {
+            display: none;
+        }
+    }
+
+}
+.story-title {
+    display: block;
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em;
+    width: 80%;
+    color: #fff;
+    z-index: 3;
+    h3 {
+        font-size: 1.875em;
+        font-weight: normal;
+        margin: 0 0 0.25em;
+    }
+    p {
+        margin: 0;
+    }
+    @include bp(44) {
+        h3 {
+            font-size: 1.25em;
+        }
+        p {
+            font-size: 0.875em;
+        }
+    }
+    @include bp(50) {
+        display: none;
+        h3 {
+            font-size: 1.875em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+}
+.story-content {
+    position: relative;
+}
+#close-story {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    color: #999;
+    font-size: 3.5em;
+    line-height: 1;
+}
+.story {
+    display: none;
+    padding: 2em 0;
+    h3 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+    h4 {
+        margin: 0 0 0.5em;
+    }
+}

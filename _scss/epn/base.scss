@@ -1,0 +1,46 @@
+@import "../normalize";
+@import "../bits";
+@import "../var";
+$epn-blue: rgb(32, 122, 176);
+html,body {
+	overflow-x:hidden;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+    font: normal 1em / 1.6 "Montserrat", Helvetica, Arial, Verdana, sans-serif;
+    max-width: 110em;
+	margin: 0 auto;
+    color: #424242;
+	@include bp(80) {
+		font-size: 1.05em;
+	}
+}
+a {
+	color:  $blue;
+	text-decoration: none;
+	transition: all 250ms ease-in-out;
+	&:hover {
+		color: darken($blue, 10%);
+	}
+}
+p,
+ul,
+ol {
+	margin: 0 0 1em;
+}
+.btn {
+	@include button($epn-blue, $epn-blue, #fff);
+	text-transform: uppercase;
+}
+.site {
+	max-width: 110em !important;
+}
+@import "../icons";
+@import "../modules";
+@import "../footer.scss";
+@import "header.scss";
+@import "intro.scss";
+@import "video.scss";
+@import "subscribe.scss";
+@import "projects.scss";
+@import "donate.scss";

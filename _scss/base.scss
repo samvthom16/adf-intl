@@ -1,0 +1,122 @@
+/*!
+	Theme Name: ADF Intl
+	Theme URI: http://adfinternational.org
+	Author: CmdTab
+	Author URI: https://cmdtab.co
+*/
+@import "normalize";
+@import "bits";
+@import "var";
+
+html,body {
+	overflow-x:hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html {
+	background: #efefef;
+}
+body {
+	color: $text;
+	max-width: 110em;
+	margin: 0 auto;
+	font:
+		0.875em/1.8
+		Helvetica, Arial, sans-serif;
+	@include bp(44) {
+		font-size: 1em;
+	}
+	@include bp(80) {
+		font-size: 1.05em;
+	}
+}
+a {
+	color:  $blue;
+	text-decoration: none;
+	transition: all 250ms ease-in-out;
+	border-bottom: 1px solid $blue;
+	padding-bottom: 0.25em;
+	&:hover {
+		color: darken($blue, 10%);
+	}
+}
+p,
+ul,
+ol {
+	margin: 0 0 1em;
+}
+hr {
+	width: 40%;
+    height: 1px;
+	background-color: $light-gray;
+	margin: 3em auto;
+	border: 0;
+}
+.btn {
+	@include button($blue, $blue, #fff);
+	&.red {
+		background: $red;
+		border-color: $red;
+		&:hover {
+			background: darken($red, 10%);
+			border-color: darken($red, 10%);
+		}
+	}
+	&.yellow {
+		background: $yellow;
+		border-color: $yellow;
+		&:hover {
+			background: darken($yellow, 10%);
+			border-color: darken($yellow, 10%);
+		}
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.1;
+	font-family: 'Roboto Condensed', Arial, sans-serif;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.25em;
+	@include bp(50) {
+		font-size: 3em;
+	}
+}
+h2 {
+	font-size: 1.5em;
+	@include bp(50) {
+		font-size: 2em;
+	}
+}
+h3 {
+	font-size: 1.25em;
+	@include bp(50) {
+		font-size: 1.5em;
+	}
+}
+h4 {
+	font-size: 1.25em;
+}
+@import "icons";
+@import "modules";
+@import "header";
+@import "banner";
+@import "centered";
+@import "dropdowns";
+@import "boxes";
+@import "articles";
+@import "newsletter";
+@import "involved";
+@import "footer";
+@import "single";
+@import "video-list";
+@import "content-section";
+@import "resources";
+@import "tabs";
+@import "image-module";
+@import "picture";
+@import "forms";
+@import "single-resource";
+@import "search";

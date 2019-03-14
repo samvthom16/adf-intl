@@ -1,0 +1,22 @@
+.centered-text {
+    background: #fff;
+    padding: 3em 0;
+    text-align: center;
+    font-size: 1.1em;
+    .wrap {
+        max-width: 42em;
+    }
+    h2 {
+        font-size: 2.25em;
+    }
+    h1,
+    h2,
+    h3 {
+        margin-top: 0;
+    }
+    .fitvids {
+        > div {
+            margin-bottom: 1em;
+        }
+    }
+}

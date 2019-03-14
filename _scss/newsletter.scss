@@ -1,0 +1,67 @@
+.subscribe {
+    padding: 2em 0;
+}
+.newsletter {
+    text-align: center;
+    margin: 0 auto 3em;
+    max-width: 38em;
+    position: relative;
+    .gform_wrapper {
+        margin: 0;
+        form {
+            text-align: center;
+        }
+        .gform_title {
+            font-size: 2.25em;
+            color: $blue;
+            margin: 0 0 0.25em;
+            font-weight: normal;
+        }
+        .gform_description {
+            font-size: 1.125em;
+            font-style: italic;
+            color: $blue;
+        }
+        .gform_footer {
+            position: absolute;
+            right: 0;
+            bottom: 0.05em;
+            padding: 0;
+            margin: 0;
+            width: 3em !important;
+            height: 2.35em !important;
+            background: $blue !important;
+            padding: 0.5em 0.825em !important;
+            &:hover {
+                background: lighten($blue, 10%) !important;
+            }
+            input[type=image],
+            input[type=submit] {
+                margin: 0 !important;
+                display: block;
+                width: 1.35em !important;
+                height: 1.35em !important;
+                padding: 0 !important;
+            }
+        }
+    }
+}
+.email-field {
+    position: relative;
+    padding: 0 !important;
+    .gfield_label {
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        color: #aaa;
+        font-weight: normal !important;
+        .gfield_required {
+            color: #aaa;
+        }
+    }
+    input {
+        padding: 0.5em !important;
+        width: 100% !important;
+        line-height: normal !important;
+    }
+}

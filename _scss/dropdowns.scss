@@ -1,0 +1,60 @@
+.dd-trigger {
+    display: block;
+    background: $blue;
+    color: #fff;
+    font-size: 1.25em;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    padding: 0.5em 1em;
+    border: 0;
+    box-shadow:	2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 11;
+    &:hover {
+        background: darken($blue, 10%);
+        color: #fff;
+    }
+    svg {
+        position: absolute;
+        right: 0.5em;
+        top: 50%;
+        margin-top: -0.5em;
+        font-size: 1.5em;
+        transition: transform 150ms linear;
+    }
+}
+.dropdown {
+    position: relative;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        display: none;
+        z-index: 12;
+        a {
+            display: block;
+            background: darken($blue, 5%);
+            color: #fff;
+            border: 0;
+            padding: 0.5em;
+            border-bottom: 1px solid darken($blue, 9%);
+            &:hover {
+                background: darken($blue, 9%);
+                color: #fff;
+            }
+        }
+    }
+
+}
+.open {
+    .dd-trigger {
+        &:hover {
+            background: $blue;
+        }
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+}

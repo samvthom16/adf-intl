@@ -1,0 +1,38 @@
+.story-header {
+    position: relative;
+    img {
+        display: block;
+    }
+}
+.story-container {
+    padding: 4em 0;
+    .addthis_inline_share_toolbox {
+        margin: 2em 0 0;
+    }
+}
+.story-side {
+    > img {
+        display: block;
+        margin: 0 0 2em;
+    }
+    a {
+        display: block;
+        position: relative;
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -0.5em 0 0 -0.5em;
+            font-size: 4em;
+            color: rgba(255,255,255,0.6);
+        }
+        img {
+            display: block;
+        }
+        &:hover {
+            svg {
+                color: #fff;
+            }
+        }
+    }
+}

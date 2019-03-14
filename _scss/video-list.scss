@@ -1,0 +1,47 @@
+.video-list {
+    padding: 3em 0;
+    h2 {
+        text-align: center;
+    }
+    a[data-video] {
+        display: block;
+        text-align: center;
+        border: 0;
+        padding: 0;
+        color: #fff;
+        div {
+            position: relative;
+            img {
+                display: block;
+            }
+            &:before {
+                content: '\25b6';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                font-size: 4em;
+                margin: -0.5em 0 0 -0.5em;
+                opacity: 0.7;
+                line-height: 1;
+                color: #fff;
+            }
+        }
+        &:hover {
+            div {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+        span {
+
+        }
+    }
+    &.gray,
+    &.white {
+        color: $text;
+        a[data-video] {
+            color: $text;
+        }
+    }
+}

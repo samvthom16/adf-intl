@@ -1,0 +1,130 @@
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+	width: 90%;
+	max-width: 60em;
+    padding: 1em 0;
+    z-index: 10;
+	@include bp(67.5) {
+        left: 50%;
+        right: auto;
+        margin-left: -33.75em;
+		width: 100%;
+		max-width: 67.5em;
+	}
+}
+.site-title {
+    width: 50%;
+    float: left;
+    margin: 0;
+    @include bp(44) {
+        width: 30%;
+    }
+}
+.top-navigation {
+    float: left;
+    width: 50%;
+    margin: 0;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        line-height: 1;
+    }
+    li {
+        display: none;
+        margin-left: 0.5em;
+        padding: 0 1em;
+        &.social-icons {
+            display: inline-block;
+            a {
+                padding: 0;
+                color: #207ab0;
+                font-size: 1.5em;
+                border: 0;
+            }
+        }
+    }
+    @include bp(44) {
+        width: 70%;
+        li {
+            display: inline-block;
+            &.social-icons {
+                position: relative;
+                top: 0.25em;
+                a {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+    a {
+        text-transform: uppercase;
+        font-size: 0.875em;
+        padding-bottom: 2px;
+        font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+        color: #4f4f4f;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-bottom: 2px solid #4f4f4f;
+        }
+    }
+}
+.nav-toggle {
+    display: none;
+}
+.site-banner {
+    background: url(../_i/epn-banner-mobile.jpg) center top no-repeat;
+    background-size: cover;
+    padding: 15% 0;
+    height: 100vh;
+    min-height: 20em;
+    /*&:before {
+        content: '';
+        display: block;
+        height: 30vh;
+        width: 100%;
+        background: linear-gradient(to bottom, #fff, #fff 80%, transparent);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }*/
+    @include bp(44) {
+        height: 80vh;
+        background-position: center -40vh;
+    }
+    @include bp(50) {
+        padding: 7.5% 0;
+        background-image: url(../_i/epn-banner.jpg);
+        background-position: center top;
+        min-height: 55em;
+        height: 100vh;
+    }
+}
+.banner-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 5%;
+    h2 {
+        font-weight: 600;
+    }
+    p {
+        line-height: 1.4;
+    }
+    @include bp(50) {
+        padding: 0 7.5% 0 45%;
+        text-align: right;
+        h2 {
+            font-size: 2.25em;
+        }
+        p {
+            font-size: 1.375em;
+            padding-left: 20%;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.feature-video {
+    padding: 4em 0;
+    .wrap {
+        max-width: 55em;
+        text-align: center;
+    }
+    .addthis_inline_share_toolbox {
+        margin: 1em auto 0;
+    }
+}
+.featured-story {
+    padding: 4em 0 2em;
+    background: #ECF1F2;
+    h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+}
+.secondary-feature {
+    background: #fff;
+    border: 1px solid #eee;
+    position: relative;
+    .content-type {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+.feature-image {
+    display: block;
+    border: 0;
+    padding: 0;
+    img,
+    picture {
+        display: block;
+    }
+    @include bp(62.5) {
+        float: left;
+        width: 30%;
+    }
+}
+.feature-content {
+    padding: 2em 2em 1em 1.5em;
+
+    h3 {
+        margin: 0 0 1em;
+    }
+    p,
+    a {
+        font-size: 0.9375em;
+    }
+    a {
+        font-weight: bold;
+        &:hover {
+            padding-bottom: 0.5em;
+        }
+    }
+    @include bp(62.5) {
+        float: right;
+        width: 70%;
+    }
+}

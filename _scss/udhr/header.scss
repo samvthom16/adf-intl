@@ -1,0 +1,105 @@
+.site-header {
+    position: absolute;
+    top: 1em;
+    left: 5%;
+    right: 5%;
+    z-index: 10;
+    @include bp(44) {
+        top: 2em;
+    }
+}
+.logo {
+    display: block;
+    float: left;
+    width: 50%;
+    img {
+        max-width: 15em;
+    }
+}
+.site-nav {
+    float: right;
+    width: 50%;
+    text-align: right;
+    > ul {
+        display: none;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+        }
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0 1em 1em;
+            font-size: 0.8125em;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @include bp(50) {
+            display: inline-block;
+        }
+    }
+}
+.language-dropdown {
+    display: inline-block;
+    position: relative;
+    font-size: 0.875em;
+    margin-left: 1em;
+    a {
+        display: block;
+        background: #fff;
+        text-decoration: none;
+        padding: 0.25em 0.5em;
+        width: 100%;
+        color: #424242;
+        border-bottom: 1px solid darken(#fff, 10%);
+        &:hover {
+            background: darken(#fff, 10%);
+            text-decoration: none;
+        }
+    }
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    li {
+        &:last-child {
+            a {
+                border-bottom-left-radius: 0.25em;
+                border-bottom-right-radius: 0.25em;
+            }
+        }
+    }
+}
+#lang-trigger {
+    position: relative;
+    border-radius: 0.25em;
+    padding: 0.25em 2em 0.25em 1.5em;
+    width: auto;
+    svg {
+        position: absolute;
+        top: 50%;
+        right: 0.5em;
+        margin-top: -0.5em;
+        font-size: 0.8125em;
+    }
+}
+.expanded {
+    #lang-trigger {
+        border-radius: 0;
+        border-top-left-radius: 0.25em;
+        border-top-right-radius: 0.25em;
+    }
+}

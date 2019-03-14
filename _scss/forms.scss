@@ -1,0 +1,167 @@
+.form-module {
+    padding: 2em 0;
+}
+.gray,
+.dark {
+    .form-container {
+        background: #fff;
+    }
+}
+.form-container {
+    background: $back;
+    border: 1px solid $light-gray;
+    //box-shadow:	2px 2px 4px rgba(0,0,0,0.3);
+    padding: 1.5em;
+    max-width: 45em;
+    margin: 0 auto;
+    input {
+        &[type="submit"] {
+            background: $blue;
+            color: #fff;
+            padding: 0.5em 1em;
+            text-transform: uppercase;
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            border: 0;
+        }
+    }
+    .gfield_label {
+        font-family: 'Roboto Condensed', Arial, sans-serif;
+    }
+}
+.gfield {
+    &.full-width {
+        input[type=text] {
+            width: 100% !important;
+        }
+    }
+}
+/****Donate****/
+.recurring-check {
+    .ginput_container_checkbox {
+        margin-top: 0 !important;
+    }
+    .gfield_label {
+        display: none !important;
+    }
+}
+.donation-form {
+    .donation-list {
+        > ul {
+            list-style: none;
+            margin: 0 !important;
+            padding: 0;
+            font-size: 0.8125em;
+            li {
+                display: inline-block;
+                font-weight: bold;
+                &:after {
+                    content:"|" !important;
+                    margin: 0 0.5em !important;
+                    display: inline-block;
+                }
+                &:last-child {
+                    &:after {
+                        content: none !important;
+                    }
+                }
+                a {
+                    border: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .gform_card_icon_container {
+        display: none !important;
+    }
+    .currency-selector {
+        .gfield_radio {
+            li {
+                display: inline-block;
+                input[type=radio] {
+                    position: absolute;
+                    opacity: 0;
+                    &:checked {
+                        + label {
+                            background: $red;
+                            color: #fff;
+                        }
+                    }
+                }
+                label {
+                    display: inline-block;
+                    max-width: 100%;
+                    background: $light-gray;
+                    font-family: 'Roboto Condensed', Arial, sans-serif;
+                    font-weight: 700;
+                    padding: 0.35em 0.75em;
+                    border-radius: 0.25em;
+                    margin: 0 0.5em 0 0;
+                    font-size: 1.1em;
+                    vertical-align: bottom;
+                    &:before {
+                        margin-right: 0.25em;
+                    }
+                }
+            }
+        }
+    }
+    .recurring-check {
+        .gfield_radio {
+            li {
+                display: inline-block;
+                font-size: 0.8125em;
+                input[type=radio] {
+                    position: absolute;
+                    opacity: 0;
+                    &:checked {
+                        + label {
+                            background: $blue;
+                            border-color: $blue;
+                            color: #fff;
+                        }
+                    }
+                }
+                label {
+                    display: inline-block;
+                    max-width: 100%;
+                    background: transparent;
+                    font-family: 'Roboto Condensed', Arial, sans-serif;
+                    font-weight: 700;
+                    padding: 0.35em 0.75em;
+                    border-radius: 0.25em;
+                    margin: 0 0.5em 0 0;
+                    font-size: 1.1em;
+                    vertical-align: bottom;
+                    border: 1px solid $light-gray;
+                    &:before {
+                        margin-right: 0.25em;
+                    }
+                }
+            }
+        }
+    }
+}
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html.donation-list ul {
+    margin: 1em 0 0 !important;
+}
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {
+    margin-top: 0 !important;
+}
+.page-id-1524,
+.single-resource {
+    .gform_wrapper {
+        .ginput_complex.ginput_container {
+            .address_state,
+            .address_zip {
+                margin-right: 0 !important;
+                padding-right: 16px !important;
+            }
+        }
+    }
+}
+.giftaid-checkbox {
+    input[type=checkbox] {
+        vertical-align: top !important;
+    }
+}

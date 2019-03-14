@@ -1,0 +1,135 @@
+.top-footer {
+    background: $dark-gray;
+    padding: 3em 0;
+    color: #fff;
+    .wrap {
+        position: relative;
+    }
+
+    a {
+        color: #fff;
+        padding-bottom: 0;
+        border: 0;
+    }
+    ul {
+        list-style: none;
+    }
+}
+.footer-identity {
+    text-align: center;
+    @include bp(62.5em) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+    }
+}
+.footer-links {
+    @include bp(62.5em) {
+        padding-left: 30%;
+    }
+}
+.first-group {
+    @include bp(44em) {
+        float: left;
+        width: 55%;
+        margin-right: 5%;
+    }
+}
+.second-group {
+    @include bp(44em) {
+        float: left;
+        width: 40%;
+    }
+}
+.footer-main-links {
+    margin: 0.5em 0 1em;
+    padding: 0;
+    li {
+        display: inline-block;
+        &:after {
+            content: '|';
+            margin: 0 1em;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    a {
+        font-size: 1.15em;
+        font-family: 'Roboto Condensed', Arial, sans-serif;
+    }
+}
+.social-links {
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        margin-right: 0.75em;
+    }
+    a {
+        img {
+            max-width: 2em;
+        }
+    }
+}
+.link-group {
+    margin: 0 0 2em;
+    @include bp(44) {
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    h4 {
+        margin: 0 0 0.5em;
+    }
+    li {
+        font-size: 0.875em;
+        margin-bottom: 1em !important;
+    }
+}
+.bottom-footer {
+    background: $black;
+    color: #fff;
+    padding: 1em 0;
+    a {
+        color: #fff;
+        padding: 0;
+        border: 0;
+
+    }
+}
+.copyright {
+    margin: 0 0 1em;
+    font-size: 0.875em;
+    @include bp(44) {
+        float: left;
+        width: 40%;
+    }
+}
+.bottom-links {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875em;
+    @include bp(44) {
+        float: right;
+        text-align: right;
+    }
+    li {
+        display: inline-block;
+        &:after {
+            content: '|';
+            margin: 0 1em;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

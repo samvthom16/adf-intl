@@ -1,0 +1,45 @@
+@import "../normalize";
+@import "../bits";
+@import "../var";
+.page-template-page-landing {
+    .image-overlay {
+        background: transparentize(#333, 0.2);
+        .btn {
+            line-height: 1;
+        }
+    }
+}
+.custom-nav {
+    display: none;
+    > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    @include bp(44) {
+        display: block;
+        float: right;
+        padding: 1em;
+        > ul {
+            > li {
+                float: left;
+                > a {
+                    text-align: center;
+                    font-size: 0.875em;
+                    border: 0;
+                    color: $text;
+                    padding: 0 1em;
+                    text-transform: uppercase;
+                    svg {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+    }
+}

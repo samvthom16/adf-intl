@@ -1,0 +1,253 @@
+.resource-header {
+    padding: 3em 0;
+    h2 {
+        margin: 0 0 0.25em;
+    }
+    h5 {
+        margin: 0 0 1em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        fontweight: bold;
+        color: darken($back, 20%);
+    }
+}
+.resource-list-container {
+    padding: 3em 0;
+}
+.resource-list-header {
+    padding: 0 0 0.75em;
+    margin: 0;
+    border-bottom: 1px solid darken($back, 10%);
+    text-align: center;
+    h1 {
+        margin: 0;
+    }
+
+    @include bp(62.5) {
+        text-align: left;
+        padding: 0 0 0.25em;
+        h1 {
+            float: left;
+        }
+    }
+}
+.resource-search {
+    line-height: 1;
+    padding: 0.75em 0 0;
+    @include bp(62.5) {
+        float: right;
+    }
+    .search-form {
+        position: relative;
+        max-width: 14em;
+        margin: 0 auto 1em;
+        @include bp(62.5) {
+            margin: 0;
+        }
+        .search-field {
+            width: 100%;
+            padding: 0.3em 0.5em;
+            border: 1px solid $light-gray;
+        }
+        .search-submit {
+            background: none;
+            position: absolute;
+            right: 0.5em;
+            top: 50%;
+            background: url('_i/search.png') center center no-repeat;
+            background-size: 100%;
+            display: block;
+            height: 1em;
+            width: 1em;
+            margin-top: -0.5em;
+            padding: 0;
+            text-indent: -9999px;
+            border: 0;
+        }
+        //display: none;
+    }
+}
+.trigger-search {
+    padding: 0;
+    border: 0;
+    font-size: 2em;
+    vertical-align: middle;
+    svg {
+        fill: $gray;
+    }
+}
+.archive-dropdown {
+    display: inline-block;
+    font-size: 0.9375em;
+    position: relative;
+    @include bp(62.5) {
+        display: block;
+        float: right;
+        margin-left: 1em;
+    }
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        min-width: 100%;
+        border-top: 1px solid darken($light-gray, 10%);
+        li {
+            border-bottom: 1px solid darken($light-gray, 10%);
+            &:last-of-type {
+                border: 0;
+            }
+        }
+        a {
+            display: block;
+            background: $light-gray;
+            padding: 0.75em;
+            border: 0;
+            color: $text;
+            font-size: 0.875em;
+            line-height: 1;
+            &:hover {
+                background: darken($light-gray, 10%);
+            }
+        }
+    }
+    &.expanded {
+        ul {
+            display: block;
+            li {
+                &:last-child {
+                    a {
+                        border-bottom-left-radius: 0.15em;
+                        border-bottom-right-radius: 0.15em;
+                    }
+
+                }
+            }
+
+        }
+        .cat-dropdown {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.cat-dropdown {
+    display: block;
+    padding: 0.5em 1.25em;
+    margin: 0.75em 0 0 0;
+    border: 0;
+    background: $light-gray;
+    color: $text;
+    border-radius: 0.15em;
+    line-height: 1;
+    &:hover {
+        background: darken($light-gray, 10%);
+        color: $text;
+    }
+    &:after {
+        content: '\25be';
+        margin: 0 0 0 0.5em;
+        font-size: 1.1em;
+    }
+}
+.resource-list {
+    display: flex;
+    flex-wrap: wrap;
+    .resource-item {
+        position: relative;
+        width: 50%;
+        padding: 1.5em 1em 3.75em;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 0.9375em;
+        border-bottom: 1px solid darken($back, 10%);
+        border-right: 1px solid darken($back, 10%);
+        h5 {
+            margin: 0 0 0.25em;
+            text-transform: uppercase;
+            color: darken($light-gray, 20%);
+        }
+        @include bp(50) {
+            width: 25%;
+        }
+    }
+    svg,
+    img {
+        fill: $light-gray;
+        display: block;
+        margin: 0 auto 1em;
+        vertical-align: middle;
+        width: 6em;
+    }
+}
+
+.resource-actions {
+    margin: 1em 0 0;
+    position: absolute;
+    bottom: 1.5em;
+    left: 0.15em;
+    right: 0.15em;
+    a {
+        display: inline-block;
+        padding: 0.35em 0.25em;
+        background: $blue;
+        border: 1px solid $blue;
+        color: #fff;
+        font-size: 0.875em;
+        &:hover {
+            background: darken($blue, 10%);
+            border-color: darken($blue, 10%);
+        }
+        &:nth-of-type(2) {
+            background: none;
+            color: $blue;
+            margin-left: 0.5em;
+            &:hover {
+                color: #fff;
+                background: darken($blue, 10%);
+                border-color: darken($blue, 10%);
+            }
+        }
+        @include bp(50) {
+            padding: 0.35em 0.5em;
+        }
+    }
+}
+.more-resources {
+    border-top: 1px solid darken($back, 5%);
+    margin: 2em 0 0;
+    padding-bottom: 0;
+    h2 {
+        text-align: center;
+        margin: 0 0 1em;
+    }
+    a {
+        background: none;
+        &:hover {
+            border-color: transparent;
+        }
+        h5 {
+            margin-bottom: 0;
+        }
+        .link {
+            /*left: 50%;
+            margin-left: -2.8125em;*/
+            padding: 0.5em 0.75em;
+            line-height: 1;
+            background: $blue;
+            border: 1px solid $blue;
+            color: #fff;
+            font-size: 0.875em;
+            &:hover {
+                background: darken($blue, 10%);
+                border-color: darken($blue, 10%);
+            }
+        }
+    }
+}

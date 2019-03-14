@@ -1,0 +1,128 @@
+.donate {
+    background: url(../_i/epn-donate.jpg) left 20vh no-repeat;
+    background-size: cover;
+    padding: 2em 0 50vh;
+    h2 {
+        font-size: 1.75em;
+        margin: 0 0 0.5em;
+        text-align: center;
+        line-height: 1;
+    }
+    @include bp(50) {
+        padding: 5em 0 50vh;
+        background-position: right top;
+        h2 {
+            font-size: 4.75em;
+        }
+    }
+}
+.donate-instructions {
+    padding: 0 2em 0 0;
+    @include bp(50) {
+        float: left;
+        width: 35%;
+    }
+}
+#donate-form {
+    background: #fff;
+    border: 1px solid #999;
+    @include bp(50) {
+        float: left;
+        width: 35%;
+    }
+    .gform_wrapper {
+        margin-top: 0;
+    }
+    .gfield {
+        padding: 0 1em;
+        &.gfield_html {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    h3 {
+        margin: 0 0 2em;
+        padding: 0.5em 1em;
+        background: $epn-blue;
+        color: #fff;
+    }
+    .donation-freq,
+    .donation-amounts {
+        text-align: center;
+        padding: 0 0.25em;
+        .gfield_label {
+            display: none;
+        }
+        li {
+            display: inline-block;
+            label {
+                border: 1px solid #999;
+                font-size: 1.15em;
+                padding: 0.75em;
+                border-radius: 0.25em;
+                line-height: 1;
+                max-width: 100%;
+                font-weight: bold;
+                margin: 0 0.5em 0 0;
+                white-space: nowrap;
+                &:hover {
+                    border-color: $epn-blue;
+                    color: $epn-blue;
+                }
+            }
+            input[type=radio] {
+                position: absolute;
+                visibility: hidden;
+                &:checked {
+                    + label {
+                        background: $blue;
+                        color: #fff;
+                        border-color: $epn-blue;
+                    }
+                }
+            }
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+    .donation-freq {
+        li {
+            label {
+                font-size: 0.875em;
+                padding: 0.75em 1.25em;
+            }
+            &:last-child {
+                display: inline-block;
+            }
+        }
+    }
+    .gfield_price {
+        input {
+            width: 100%;
+        }
+    }
+    input[type="submit"] {
+        @include button($epn-blue, $epn-blue, #fff);
+        display: none;
+        width: 80%;
+        margin: 2em auto 1em;
+    }
+    .gform_footer {
+        padding: 0;
+    }
+}
+#to-info,
+#to-payment {
+    @include button($epn-blue, $epn-blue, #fff);
+    display: block;
+    width: 80%;
+    margin: 2em auto;
+}
+#to-payment {
+    display: none;
+}
+.for-info,
+.for-payment {
+    display: none;
+}

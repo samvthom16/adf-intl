@@ -1,0 +1,67 @@
+.three-boxes {
+    padding: 3em 0;
+    h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+    li {
+        background: #fff;
+    	box-shadow:	2px 2px 4px rgba(0,0,0,0.3);
+        padding: 1.5em 1.5em 3.25em;
+        color: $text;
+        position: relative;
+        &.no-link {
+            padding: 1.5em;
+        }
+        svg,
+        img {
+            display: block;
+            margin: 0 auto;
+            fill: $blue;
+            font-size: 1.375em;
+        }
+        img {
+            width: 1.375em;
+        }
+        h4 {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0.5em 0 0.75em;
+            a {
+                position: static;
+                border: 0;
+                padding: 0;
+                color: $text !important;
+                font-weight: normal;
+            }
+        }
+        a {
+            font-weight: bold;
+            position: absolute;
+            bottom: 1.5em;
+            left: 1.5em;
+        }
+    }
+    &.white {
+        li {
+            background: $back;
+        }
+    }
+    &.dark {
+        li {
+            a {
+                color: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+}
+.page-id-194 {
+    .three-boxes {
+        li {
+            img {
+                width: 3.75em;
+            }
+        }
+    }
+}

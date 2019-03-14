@@ -1,0 +1,48 @@
+.type-resource {
+    .article-header {
+        background: none;
+        position: static;
+        color: $text;
+        transform: none;
+        width: auto;
+    }
+}
+.resource-container {
+    padding: 3em 0;
+}
+.resource-sidebar {
+    background: $back;
+    border: 1px solid $light-gray;
+    padding: 1em 1.5em;
+    h5 {
+        margin: 0.5em 0 0.25em;
+        text-transform: uppercase;
+        color: darken($light-gray, 20%);
+    }
+    img {
+        display: block;
+    }
+    a {
+        @include button($blue, $blue, #fff);
+        padding: 0.25em 1.5em;
+        display: block;
+    }
+}
+.resource-title {
+    margin: 0.5em 0 0.75em;
+    font-size: 1.5em;
+}
+.resource-content {
+    .form-container {
+        h4,
+        .gform_title {
+            text-align: center;
+            color: lighten($text, 15%);
+            margin: 0 0 0.75em;
+            font-weight: normal;
+        }
+        .gform_confirmation_message {
+            text-align: center;
+        }
+    }
+}

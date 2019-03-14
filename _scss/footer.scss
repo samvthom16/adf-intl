@@ -1,0 +1,236 @@
+.hide-footer {
+    display: none;
+}
+.top-footer {
+    background: $dark-gray;
+    padding: 2em 0 1em;
+    color: #fff;
+    .wrap {
+        position: relative;
+    }
+    ul {
+        list-style: none;
+    }
+}
+.footer-logo {
+    padding: 0;
+    border: 0;
+    img {
+        max-width: 20em;
+    }
+}
+.footer-first {
+    margin: 0 0 2em;
+    text-align: center;
+}
+#trigger-top {
+    position: fixed;
+    right: 1em;
+    bottom: 4em;
+    background: $blue;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    opacity: 0;
+    &.active {
+        opacity: 0.7;
+    }
+    @include bp(44) {
+        right: 2em;
+        bottom: 3em;
+    }
+    &:hover {
+        opacity: 0.9;
+    }
+    svg {
+        fill: #fff;
+        position: relative;
+        top: 2px;
+    }
+    span {
+    }
+}
+/*.footer-dropdowns {
+    text-align: right;
+    .dropdown {
+        display: inline-block;
+        margin-left: 1em;
+        ul {
+            text-align: center;
+            a {
+                padding: 0.25em 0.5em;
+                background: #fff;
+                color: $black;
+                border-color: $gray;
+                font-size: 0.8125em;
+                &:hover {
+                    background: darken($back, 5%);
+                }
+            }
+        }
+    }
+    .dd-trigger {
+        padding: 0.25em 3em 0.25em 1.5em;
+        background: #fff;
+        color: $dark-gray;
+        font-size: 1em;
+        text-align: center;
+    }
+    .open {
+        .dd-trigger {
+            background: lighten($gray, 20%);
+            color: #fff;
+            &:hover {
+                background: lighten($gray, 20%);
+                color: #fff;
+            }
+        }
+    }
+}*/
+.footer-second {
+    font-size: 0.875em;
+    max-width: 20em;
+    margin: 0 auto;
+    @include bp(44) {
+        max-width: 100%;
+        margin: 0;
+    }
+    a {
+        color: #fff;
+        padding-bottom: 0;
+        border: 0;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h4 {
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 0 0.5em;
+        color: rgba(255,255,255,0.4);
+        //border-bottom: 1px solid #fff;
+    }
+    .two-list {
+        > li {
+            margin-bottom: 1em;
+        }
+    }
+    .three-list {
+        > li {
+            @include bp(44) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+.social {
+    a {
+        margin-right: 0.5em;
+        img {
+            max-width: 1.5em;
+        }
+    }
+}
+.bottom-footer {
+    background: $black;
+    color: #fff;
+    padding: 1em 0;
+    a {
+        color: #fff;
+        padding: 0;
+        border: 0;
+
+    }
+}
+.copyright {
+    margin: 0 0 1em;
+    font-size: 0.875em;
+    text-align: center;
+    @include bp(44) {
+        float: left;
+        width: 40%;
+        text-align: left;
+    }
+}
+.bottom-links {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875em;
+    @include bp(44) {
+        float: right;
+        text-align: right;
+    }
+    li {
+        display: inline-block;
+        &:after {
+            content: '|';
+            margin: 0 1em;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+.cookie-bar {
+    background: rgba(0,0,0,0.7);
+    padding: 0.5em 2em;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.8125em;
+    z-index: 100;
+    a {
+        color: #fff;
+        text-decoration: underline;
+        padding: 0;
+        border: 0;
+    }
+    .message {
+        float: left;
+        width: 80%;
+        p {
+            margin: 0;
+        }
+        @include bp(44) {
+            width: 100%;
+            float: none;
+        }
+    }
+    .close-cookie {
+        float: right;
+        width: 20%;
+        display: block;
+        border: 1px solid #fff;
+        padding: 0.5em 1.5em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1;
+        @include bp(44) {
+            position: absolute;
+            top: 0.75em;
+            right: 2em;
+            float: none;
+            width: auto;
+            padding: 0.25em 1.5em;
+        }
+
+        &:hover {
+            background: #fff;
+            color: $text;
+        }
+    }
+}
