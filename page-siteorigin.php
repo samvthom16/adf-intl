@@ -19,7 +19,7 @@ get_header(); ?>
 			
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-				<div class="page-content" style="max-width:1100px;padding:15px;margin-left:auto;margin-right:auto;">
+				<div class="page-content" style="max-width:1100px;padding:15px;padding-top:0;margin-left:auto;margin-right:auto;">
 					
 					<?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?>
 				</div>
