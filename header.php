@@ -62,6 +62,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div><!-- .site-branding -->
 			<nav class="top-navigation group">
 				<ul>
+					<li class="with-sub">
+						<a href = "<?php echo esc_url( home_url( '/' ) ); ?>campaign/">
+							<?php include(get_template_directory().'/_svg/icon-gavel.php'); ?>
+							Campaigns
+						</a>
+					</li>
 					<?php $issues = get_field('issues', 'option');
 					if( $issues ): ?>
 					<li class="with-sub">
