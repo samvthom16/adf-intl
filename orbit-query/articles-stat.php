@@ -1,0 +1,47 @@
+<ul class='list-inline orbit-stat'>
+  <?php while( $this->query->have_posts() ) : $this->query->the_post();?>
+  <li>
+    <?php _e( do_shortcode('[orbit_thumbnail]') );?>
+    <ul class="list-inline social-icons">
+      <li>
+        <a target="_blank" href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>">
+          <img src="<?php bloginfo('template_url');?>/_i/facebook.png" />
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_title();?>&url=<?php the_permalink();?>">
+          <img src="<?php bloginfo('template_url');?>/_i/twitter.png" />
+        </a>
+      </li>
+    </ul>
+  </li>
+  <?php endwhile;?>
+</ul>
+<style>
+  .list-inline{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  .orbit-stat{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+  .orbit-stat a[href]{
+    border-bottom: none;
+  }
+  .orbit-stat a[href] img{
+    max-width: 50px;
+    height: auto;
+  }
+  .social-icons li{
+    display: inline-block;
+  }
+  @media( max-width: 768px ){
+    .orbit-stat a[href] img{
+      max-width: 30px;
+    }
+  }
+</style>
