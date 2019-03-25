@@ -48,5 +48,11 @@
     .orbit-stat a[href] img{
       max-width: 30px;
     }
+    .orbit-stat{
+      grid-gap: 15px;
+    }
+    .orbit-stat .orbit-article{
+      padding: 10px;
+    }
   }
 </style>
