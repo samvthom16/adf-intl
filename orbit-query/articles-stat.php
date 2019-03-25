@@ -1,6 +1,6 @@
 <ul class='list-inline orbit-stat'>
   <?php while( $this->query->have_posts() ) : $this->query->the_post();?>
-  <li>
+  <li class="orbit-article">
     <?php _e( do_shortcode('[orbit_thumbnail]') );?>
     <ul class="list-inline social-icons">
       <li>
@@ -29,6 +29,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
   }
+  .orbit-stat .orbit-article{
+    border: #eee solid 1px;
+    padding: 20px;
+  }
+
   .orbit-stat a[href]{
     border-bottom: none;
   }
