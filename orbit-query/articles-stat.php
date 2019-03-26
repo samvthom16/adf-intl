@@ -50,7 +50,7 @@
   .social-icons li{
     display: inline-block;
   }
-  .orbit-stat .orbit-excerpt{
+  .orbit-stat .orbit-excerpt p{
     color: #404040 !important;
     font-size: 0.875em !important;
     text-shadow: none !important;
