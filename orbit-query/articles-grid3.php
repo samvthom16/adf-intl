@@ -1,6 +1,6 @@
 <ul class="article-list three-list group">
   <?php while( $this->query->have_posts() ) : $this->query->the_post();?>
-	<li style="background:#fff;position:relative;">
+	<li style="margin-bottom:30px;background:#fff;position:relative;">
     <a href="<?php the_permalink();?>">
       <?php
         global $post_id;
