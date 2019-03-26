@@ -2,6 +2,7 @@
   <?php while( $this->query->have_posts() ) : $this->query->the_post();?>
   <li class="orbit-article">
     <?php _e( do_shortcode('[orbit_thumbnail]') );?>
+    <div><?php the_excerpt();?></div>
     <ul class="list-inline social-icons">
       <li>
         <a target="_blank" href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>">
@@ -9,7 +10,7 @@
         </a>
       </li>
       <li>
-        <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_title();?>&url=<?php the_permalink();?>">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_excerpt();?>&url=<?php the_permalink();?>">
           <img src="<?php bloginfo('template_url');?>/_i/twitter.png" />
         </a>
       </li>
