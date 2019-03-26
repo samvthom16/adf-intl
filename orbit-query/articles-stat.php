@@ -2,7 +2,7 @@
   <?php while( $this->query->have_posts() ) : $this->query->the_post();?>
   <li class="orbit-article">
     <?php _e( do_shortcode('[orbit_thumbnail]') );?>
-    <div><?php the_excerpt();?></div>
+    <div class='orbit-excerpt'><?php the_excerpt();?></div>
     <ul class="list-inline social-icons">
       <li>
         <a target="_blank" href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>">
@@ -50,6 +50,12 @@
   .social-icons li{
     display: inline-block;
   }
+  .orbit-stat .orbit-excerpt{
+    color: #404040 !important;
+    font-size: 0.875em !important;
+    text-shadow: none !important;
+  }
+
   @media( max-width: 768px ){
     .orbit-stat a[href] img{
       max-width: 30px;
