@@ -4,9 +4,14 @@
     <a href="<?php the_permalink();?>">
       <?php
         global $post_id;
+        $post_type = get_post_type();
         $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'medium' );
         if( is_array( $thumbnail ) ){
-    			echo "<div class='orbit-thumbnail-bg' style='background-image: url(".$thumbnail[0].");'></div>";
+          $bg_size = 'cover';
+          if( $post_type == 'resource' ){
+            $bg_size = 'contain';
+          }
+    			echo "<div class='orbit-thumbnail-bg' style='background-size:".$bg_size.";background-image: url(".$thumbnail[0].");'></div>";
     		}
       ?>
       <span class="content-type"><?php _e( do_shortcode('[orbit_post_type]') );?></span>
