@@ -62,7 +62,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div><!-- .site-branding -->
 			<nav class="top-navigation group">
 				<ul>
-					<li class="with-sub">
+					<li>
 						<a href = "<?php echo esc_url( home_url( '/' ) ); ?>campaign/">
 							<?php include(get_template_directory().'/_svg/icon-gavel.php'); ?>
 							Campaigns
