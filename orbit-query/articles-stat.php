@@ -1,4 +1,4 @@
-<ul class='list-inline orbit-stat'>
+<ul class='list-inline orbit-stat three-list'>
   <?php while( $this->query->have_posts() ) : $this->query->the_post();?>
   <li class="orbit-article">
     <?php _e( do_shortcode('[orbit_thumbnail]') );?>
@@ -30,11 +30,13 @@
     padding: 0;
 
   }
+  /*
   .orbit-stat{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
   }
+  */
   .orbit-stat .orbit-article{
     border: #eee solid 1px;
     padding: 20px;
@@ -60,9 +62,11 @@
     .orbit-stat a[href] img{
       max-width: 30px;
     }
+    /*
     .orbit-stat{
       grid-gap: 15px;
     }
+    */
     .orbit-stat .orbit-article{
       padding: 10px;
     }
