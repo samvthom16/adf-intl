@@ -26,7 +26,7 @@ global $nav;
 <body <?php body_class('udhr'); ?>>
 <div id="page" class="site">
 	<header class="site-header group">
-		<a href="http://www.imhumanright.org/" rel="home" class="logo"><img src="<?php bloginfo('template_directory'); ?>/_i/logo-white.png" /><span class="assistive-text"><?php bloginfo( 'name' ); ?></span></a>
+		<a href="https://www.ADFInternational.org/" rel="home" class="logo"><img src="<?php bloginfo('template_directory'); ?>/_i/logo-white.png" /><span class="assistive-text"><?php bloginfo( 'name' ); ?></span></a>
 		<?php if(!is_page_template( 'page-udhr-single.php')) : ?>
 		<nav class="site-nav">
 			<?php if($nav) : ?>

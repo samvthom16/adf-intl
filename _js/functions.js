@@ -52,7 +52,7 @@ function tweetButton() {
 	var url = window.location.href;
 	jQuery('.entry-content blockquote').each(function() {
 		text = encodeURIComponent(jQuery(this).text());
-		twitter = '<div class="tweet"><a href = "https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="'+jQuery(this).text()+'" data-url="'+url+'" class="twitter-share-button">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>';
+		twitter = '<div class="tweet"><a href = "https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="'+jQuery(this).text()+'" data-url="'+url+'" data-via="adfintl" class="twitter-share-button">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>';
 		jQuery(this).append(twitter);
 	});
 }

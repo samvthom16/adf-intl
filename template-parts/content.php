@@ -110,7 +110,10 @@ $type = get_post_type($post->ID);
 	<?php else :?>
 	<div class="entry-content sm-wrap">
 		<?php
-
+			$summary = get_field('summary');
+			if(is_singular('news') && !empty($summary)) {
+				echo '<div class="summary"><h2>Summary</h2>'.$summary.'</div>';
+			}
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -130,7 +133,7 @@ $type = get_post_type($post->ID);
 			) );
 			if($type == 'commentary' || $type == 'news' ):
 		?>
-		<iframe src="https://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_the_permalink()); ?>&width=124&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId" width="124" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+		<div class="addthis_inline_share_toolbox"></div>
 		<?php endif; ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">

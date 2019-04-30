@@ -56,14 +56,17 @@
 								) );
 							?>
 								<li class="social">
-									<a href = "https://www.facebook.com/ADFInternational/?ref=br_rs" class="facebook">
+									<a href = "https://www.facebook.com/ADFInternational" target="_blank" class="facebook">
 										<img src="<?php bloginfo('template_directory'); ?>/_i/facebook.png" />
 										<span class="assistive-text">Facebook</span>
 									</a>
-									<a href = "https://twitter.com/IntlAdf" class="twitter">
+									<a href = "https://twitter.com/ADFIntl" target="_blank" class="twitter">
 										<img src="<?php bloginfo('template_directory'); ?>/_i/twitter.png" />
 										<span class="assistive-text">Twitter</span>
 									</a>
+									<a href = "https://www.linkedin.com/company/adfinternational/" target="_blank"" class="linkedin">
+										<img src="<?php bloginfo('template_directory'); ?>/_i/linkedin.png" />
+										<span class="assistive-text">Twitter</span>
 								</li>
 							</ul>
 						</li>
@@ -97,6 +100,7 @@
 <div class="overlay-content"></div>
 <div class="overlay"></div>
 <?php wp_footer(); ?>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5afc78526bb936fd"></script>
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -108,36 +112,17 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '2334661420093630');
+  fbq('init', '718679458477391');
   fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=2334661420093630&ev=PageView&noscript=1"
-/></noscript>
+/>
+<img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=718679458477391&ev=PageView&noscript=1"
+/>
+
+</noscript>
 <!-- End Facebook Pixel Code -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59325025-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-59325025-1');
-</script>
-<script>
-  window.addEventListener('load', function() {
-    jQuery('[href="https://adfinternational.org/donate/"]').click(function() {
-      gtag('event', 'donate_click', {
-        'event_category': 'donate_button',
-        'event_label': window.location.pathname
-      });
-    });
-    if ((window.location.pathname == "/subscribe/") && (window.location.search == "?list=news") && (jQuery('#gform_confirmation_message_10:contains("Thank you for signing up")').is(':visible'))) {
-      gtag('event', 'newsletter_submit', {
-        'event_category': 'newsletter_form'
-      });
-    }
-  })
-
-</script>
 </body>
 </html>
