@@ -129,6 +129,9 @@ function adf_intl_scripts() {
 
 	wp_enqueue_script( 'functions', get_template_directory_uri() . '/_js/functions-min.js', array('jquery'), '20160606', true );
 
+	wp_enqueue_script( 'sow', get_template_directory_uri() . '/_js/lib/sow.js', array('jquery'), '20190509', true );
+	wp_enqueue_style( 'sow-style', get_template_directory_uri() . '/css/sow.css' );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -408,5 +411,15 @@ function my_pre_get_posts( $query ) {
 }
 
 add_action('pre_get_posts', 'my_pre_get_posts');
+
+/* ADD SOW FROM THE THEME */
+add_action('siteorigin_widgets_widget_folders', function( $folders ){
+	$folders[] = get_template_directory() . '/so-widgets/';
+	return $folders;
+});
+
+function getUniqueID( $data ){
+	return substr( md5( json_encode( $data ) ), 0, 8 );
+}
 
 include("inc/orbit-inc.php");
