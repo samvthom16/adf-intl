@@ -16,7 +16,7 @@
   -webkit-transition: transform .35s ease-out;
   transition: transform .35s ease-out;
 }
-@@media ( max-width:768px ) {
+@media ( max-width:768px ) {
   .inline-post-image img{
     width: 100%;
   }
