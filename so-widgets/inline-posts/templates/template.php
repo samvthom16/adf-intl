@@ -26,3 +26,8 @@
 	</div>
 <?php endif; endforeach;?>
 <!-- END OF MODALS -->
+<style>
+	.inline-post{
+		max-height: <?php _e( $instance['height'] );?>
+	}
+</style>

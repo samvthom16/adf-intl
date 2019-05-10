@@ -27,6 +27,7 @@ class Inline_Posts extends SiteOrigin_Widget {
 			array(),
 			//The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
 			array(
+
 				'posts' => array(
 					'type' 	=> 'repeater',
 					'label' => __( 'Posts Section' , 'siteorigin-widgets' ),
@@ -53,7 +54,12 @@ class Inline_Posts extends SiteOrigin_Widget {
 			        'fallback' => true
 			    	)
 					)
-				)
+				),
+				'height' => array(
+					'type' 		=> 'text',
+					'label' 	=> __( 'Column Height', 'siteorigin-widgets' ),
+					'default'	=> '250px'
+				),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/inline-posts"
