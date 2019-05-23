@@ -11,7 +11,7 @@ add_filter( 'orbit_post_type_vars', function( $post_types ){
 		'public'	   => true,
 		'supports'	 => array('title', 'editor', 'author', 'thumbnail')
 	);
-
+	/*
 	$post_types['daily-digest'] = array(
 		'slug' 		=> 'daily-digest',
 		'labels'	=> array(
@@ -22,6 +22,7 @@ add_filter( 'orbit_post_type_vars', function( $post_types ){
 		'public'	   => true,
 		'supports'	 => array('title', 'editor', 'author', 'thumbnail')
 	);
+	*/
 
 	$post_types['alliance-alert'] = array(
 		'slug' 		=> 'alliance-alert',
