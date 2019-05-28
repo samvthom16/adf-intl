@@ -7,7 +7,7 @@ jQuery("[data-toggle~=modal]").each( function(){
 
     var $modal = jQuery( $button.attr( 'href' ) );
 
-    $modal.addClass('open');
+    $modal.addClass('show-modal');
   });
 
 });
@@ -27,8 +27,7 @@ jQuery("[data-behaviour~=inline-modal]").each( function(){
     });
 
     function hideModal(){
-      console.log('hide modal');
-      $modal.removeClass('open');
+      $modal.removeClass('show-modal');
     }
 
 });

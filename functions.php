@@ -129,8 +129,8 @@ function adf_intl_scripts() {
 
 	wp_enqueue_script( 'functions', get_template_directory_uri() . '/_js/functions-min.js', array('jquery'), '20160606', true );
 
-	wp_enqueue_script( 'sow', get_template_directory_uri() . '/_js/lib/sow.js', array('jquery'), '20190509', true );
-	wp_enqueue_style( 'sow-style', get_template_directory_uri() . '/css/sow.css', array(), '20190524' );
+	wp_enqueue_script( 'sow', get_template_directory_uri() . '/_js/lib/sow.js', array('jquery'), '20190528', true );
+	wp_enqueue_style( 'sow-style', get_template_directory_uri() . '/css/sow.css', array(), '20190528' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

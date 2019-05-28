@@ -64,7 +64,7 @@
   display: none;
 
 }
-.inline-modal.open{
+.inline-modal.show-modal{
   display: block;
 }
 .inline-modal .close{
@@ -105,7 +105,8 @@
   display: block;
   border: #333 solid 1px;
   padding: 10px 15px;
-  width: 200px;
+  min-width: 200px;
+  max-width: 350px;
   margin: 0 auto 20px;
   background: #333;
   color: #fff;
