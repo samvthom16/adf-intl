@@ -17,7 +17,7 @@
       <span class="content-type"><?php _e( do_shortcode('[orbit_post_type]') );?></span>
 			<div class="article-content">
 				<h4><?php the_title();?></h4>
-				<div style="max-height:150px;overflow:hidden;"><?php the_excerpt();?></div>
+				<div style="max-height:160px;overflow:hidden;margin-bottom:20px;"><?php the_excerpt();?></div>
 				<strong class="link">Read more</strong>
 			</div>
     </a>
