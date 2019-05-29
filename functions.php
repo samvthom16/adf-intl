@@ -422,4 +422,8 @@ function getUniqueID( $data ){
 	return substr( md5( json_encode( $data ) ), 0, 8 );
 }
 
+add_filter( 'excerpt_length', function(){
+	return 35;
+}, 999 );
+
 include("inc/orbit-inc.php");
