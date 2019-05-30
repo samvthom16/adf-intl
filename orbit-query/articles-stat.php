@@ -10,7 +10,7 @@
         </a>
       </li>
       <li>
-        <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_excerpt();?>&url=<?php the_permalink();?>">
+        <a target="_blank" href="https://twitter.com/intent/tweet?url=<?php the_permalink();?>">
           <img src="<?php bloginfo('template_url');?>/_i/twitter.png" />
         </a>
       </li>
